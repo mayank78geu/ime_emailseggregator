@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-900 text-slate-200;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-blue;
+  }
+}
+
+@layer components {
+  /* Glass card */
+  .glass-card {
+    @apply bg-navy-800 border border-white/5 rounded-2xl backdrop-blur-sm;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm
+           bg-accent-blue text-white transition-all duration-200
+           hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/25
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm
+           bg-white/5 text-slate-300 border border-white/10 transition-all duration-200
+           hover:bg-white/10 hover:text-white active:scale-95;
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full bg-navy-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-slate-200
+           placeholder-slate-500 outline-none transition-all duration-200
+           focus:border-accent-blue/60 focus:ring-2 focus:ring-accent-blue/20;
+  }
+
+  /* Category badges */
+  .badge-tonnage {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-tonnage-bg text-tonnage border border-tonnage/30;
+  }
+
+  .badge-cargovc {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-cargovc-bg text-cargovc border border-cargovc/30;
+  }
+
+  .badge-cargotc {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold
+           bg-cargotc-bg text-cargotc border border-cargotc/30;
+  }
+
+  /* Field pair */
+  .field-row {
+    @apply flex flex-col gap-0.5;
+  }
+
+  .field-label {
+    @apply text-xs font-medium text-slate-500 uppercase tracking-wider;
+  }
+
+  .field-value {
+    @apply text-sm font-medium text-slate-200;
+  }
+
+  .field-null {
+    @apply text-sm text-slate-600 italic;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-purple;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(59,130,246,0.15);
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%);
+    background-size: 200% 100%;
+  }
+}

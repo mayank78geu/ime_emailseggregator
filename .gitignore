@@ -1,0 +1,66 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+ENV/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Local Database & Secrets
+.env
+backend/.env
+
+# Node.js
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Project Specific Ignored Files
+# Ignore all markdown documentation
+*.md
+**/*.md
+
+# Ignore all unit tests
+tests/
+backend/tests/
+*test*
+**/tests/
+**/*test*
+
+# Ignore all scratch / debug scripts
+scratch_*
+*.json
+!frontend/package.json
+!frontend/package-lock.json
+sampleEmails.txt
