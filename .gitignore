@@ -64,4 +64,5 @@ scratch_*
 !frontend/package.json
 !frontend/package-lock.json
 !frontend/vercel.json
+!frontend/tsconfig.json
 sampleEmails.txt
