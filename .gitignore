@@ -63,4 +63,5 @@ scratch_*
 *.json
 !frontend/package.json
 !frontend/package-lock.json
+!frontend/vercel.json
 sampleEmails.txt
