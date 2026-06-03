@@ -6,16 +6,10 @@ FastAPI Application Entry Point
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database import engine, Base
-import models  # noqa: F401 — ensures all models are registered
-
 # Import routers
 from routers.extract import router as extract_router
 from routers.upload import router as upload_router
 from routers.search import router as search_router
-
-# ── Create all DB tables on startup ──
-Base.metadata.create_all(bind=engine)
 
 # ── FastAPI app ──
 app = FastAPI(
